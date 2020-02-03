@@ -76,9 +76,9 @@ var createScene = function () {
 
 const scene = createScene()
 
-const check = (num) => {
+const check = () => {
   console.log('num = ', num)
-  num < 2 ?
+  num < 2 || num === 5 ?
   //num <= 1 ?
   ( () => {
     canvas.classList.add('hide');
@@ -93,6 +93,7 @@ const check = (num) => {
   // scene.render()
   num === 0 ? imgView.src = imgs[0] : null
   num === 1 ? imgView.src = imgs[1] : null
+  num === 5 ? imgView.src = imgs[5] : null
 }
 
 check(num)
