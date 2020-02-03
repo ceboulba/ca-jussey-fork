@@ -77,7 +77,7 @@ var createScene = function () {
 const scene = createScene()
 
 const check = (num) => {
-  num < 2 || num === 5 ?
+  num < 1 ?
   //num <= 1 ?
   ( () => {
     canvas.classList.add('hide');
