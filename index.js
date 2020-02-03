@@ -77,6 +77,7 @@ var createScene = function () {
 const scene = createScene()
 
 const check = (num) => {
+  console.log('num = ', num)
   num < 2 ?
   //num <= 1 ?
   ( () => {
