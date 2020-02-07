@@ -1,5 +1,7 @@
 import cloudinary from 'cloudinary-core'
 var cl = new cloudinary.Cloudinary({cloud_name: "archipicture", secure: true});
+var tag = cl.imageTag("sample");
+tag.toHtml();
 
 const imageOne = cloudinary.imageTag('https://upload.wikimedia.org/wikipedia/commons/1/13/Benedict_Cumberbatch_2011.png', {type: "fetch"}).toHtml();
 
