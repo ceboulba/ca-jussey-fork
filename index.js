@@ -16,9 +16,9 @@ const imageName = document.querySelector('.imageName')
 console.log(imageName.innerHTML)
 
 const imgs = [
-  tag,
   'https://res.cloudinary.com/archipicture/image/upload/v1580713699/ca-jussey/cam01.jpg',
   'https://res.cloudinary.com/archipicture/image/upload/v1580719118/ca-jussey/cam08.jpg',
+  tag,
   'https://res.cloudinary.com/archipicture/image/upload/v1580715376/ca-jussey/cam10.jpg',
   'https://res.cloudinary.com/archipicture/image/upload/v1580715596/ca-jussey/cam09.jpg',
   'https://res.cloudinary.com/archipicture/image/upload/v1580719923/ca-jussey/cam16.jpg',
