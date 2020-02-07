@@ -17,7 +17,7 @@ console.log(imageName.innerHTML)
 
 const imgs = [
   imageOne,
-  'https://res.cloudinary.com/archipicture/image/upload/v1574761687/relyens-olivet/relyens-olivet-01.jpg',
+  tag,
   'https://res.cloudinary.com/archipicture/image/upload/v1580713699/ca-jussey/cam01.jpg',
   'https://res.cloudinary.com/archipicture/image/upload/v1580719118/ca-jussey/cam08.jpg',
   'https://res.cloudinary.com/archipicture/image/upload/v1580715376/ca-jussey/cam10.jpg',
