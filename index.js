@@ -1,4 +1,4 @@
-import cloudinary from cloudinary
+import cloudinary from 'cloudinary'
 const imageOne = cloudinary.imageTag('https://upload.wikimedia.org/wikipedia/commons/1/13/Benedict_Cumberbatch_2011.png', {type: "fetch"}).toHtml();
 
 'use strict'
