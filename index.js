@@ -7,7 +7,8 @@ var cl = new cloudinary.Cloudinary({cloud_name: "archipicture", secure: true});
 // var tag = cl.imageTag("ca-jussey");
 // tag.toHtml();
 
-var tag = cl.url("ca-jussey/cam01.jpg")
+const imageOne = cl.url("ca-jussey/cam01.jpg")
+
 const canvas = document.getElementById('renderCanvas')
 const imgBox = document.getElementById('img-box')
 const imgView = document.getElementById('img-view')
@@ -18,7 +19,7 @@ console.log(imageName.innerHTML)
 const imgs = [
   'https://res.cloudinary.com/archipicture/image/upload/v1580713699/ca-jussey/cam01.jpg',
   'https://res.cloudinary.com/archipicture/image/upload/v1580719118/ca-jussey/cam08.jpg',
-  tag,
+  imageOne,
   'https://res.cloudinary.com/archipicture/image/upload/v1580715376/ca-jussey/cam10.jpg',
   'https://res.cloudinary.com/archipicture/image/upload/v1580715596/ca-jussey/cam09.jpg',
   'https://res.cloudinary.com/archipicture/image/upload/v1580719923/ca-jussey/cam16.jpg',
