@@ -3,10 +3,14 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "babylonjs": "^4.0.3",
-    "bulma": "^0.7.4",
-    "cloudinary": "^1.19.0",
-    "node-sass": "^4.12.0",
-    "parcel-bundler": "^1.12.3"
+    "babylonjs": "4.0.3",
+    "bulma": "0.7.5",
+    "cloudinary": "1.19.0",
+    "http": "^0.0.0",
+    "https": "^1.0.0",
+    "node-sass": "4.13.1",
+    "parcel-bundler": "1.12.4",
+    "querystring": "0.2.0",
+    "url": "0.11.0"
   }
 }
