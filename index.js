@@ -7,7 +7,7 @@ var cl = new cloudinary.Cloudinary({cloud_name: "archipicture", secure: true});
 // var tag = cl.imageTag("ca-jussey");
 // tag.toHtml();
 
-var tag = cl.url("cam01.jpg")
+var tag = cl.url("ca-jussey/cam01.jpg")
 const canvas = document.getElementById('renderCanvas')
 const imgBox = document.getElementById('img-box')
 const imgView = document.getElementById('img-view')
