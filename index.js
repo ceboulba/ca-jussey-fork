@@ -1,12 +1,13 @@
-import cloudinary from 'cloudinary-core'
-var cl = new cloudinary.Cloudinary({cloud_name: "archipicture", secure: true});
-
-
-const imageOne = cloudinary.imageTag('https://upload.wikimedia.org/wikipedia/commons/1/13/Benedict_Cumberbatch_2011.png', {type: "fetch"}).toHtml();
-
 'use strict'
 import './style.css'
+import cloudinary from 'cloudinary-core'
 import * as BABYLON from 'babylonjs'
+var cl = new cloudinary.Cloudinary({cloud_name: "archipicture", secure: true});
+
+// var tag = cl.imageTag("ca-jussey");
+// tag.toHtml();
+
+var tag = cl.url("cam01.jpg")
 const canvas = document.getElementById('renderCanvas')
 const imgBox = document.getElementById('img-box')
 const imgView = document.getElementById('img-view')
