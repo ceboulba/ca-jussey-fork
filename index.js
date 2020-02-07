@@ -1,3 +1,5 @@
+const imageOne = cloudinary.imageTag('https://upload.wikimedia.org/wikipedia/commons/1/13/Benedict_Cumberbatch_2011.png', {type: "fetch"}).toHtml();
+
 'use strict'
 import './style.css'
 import * as BABYLON from 'babylonjs'
@@ -9,7 +11,7 @@ const imageName = document.querySelector('.imageName')
 console.log(imageName.innerHTML)
 
 const imgs = [
-  'https://res.cloudinary.com/archipicture/image/upload/v1574761363/relyens-olivet/relyens-olivet-00.jpg',
+  imageOne,
   'https://res.cloudinary.com/archipicture/image/upload/v1574761687/relyens-olivet/relyens-olivet-01.jpg',
   'https://res.cloudinary.com/archipicture/image/upload/v1580713699/ca-jussey/cam01.jpg',
   'https://res.cloudinary.com/archipicture/image/upload/v1580719118/ca-jussey/cam08.jpg',
