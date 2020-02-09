@@ -67,6 +67,14 @@ var createScene = function () {
 
   let zoomLevel = 2
 
+//  AssetsManager
+  const assetsManager = new BABYLON.AssetsManager(scene)
+
+  const binaryTask = assetsManager.addFileTask("'https://res.cloudinary.com/archipicture/image/upload/v1580720640/ca-jussey/cam11.jpg")
+  binaryTask.onSuccess = function(tesk) {
+    console.log("SUCCES !")
+  }
+
   var dome = new BABYLON.PhotoDome(
     'testdome',
     imgs[num],
