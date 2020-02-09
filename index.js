@@ -70,10 +70,12 @@ var createScene = function () {
 //  AssetsManager
   const assetsManager = new BABYLON.AssetsManager(scene)
 
-  const binaryTask = assetsManager.addFileTask("'https://res.cloudinary.com/archipicture/image/upload/v1580720640/ca-jussey/cam11.jpg")
+  const binaryTask = assetsManager.addBinaryFileTask("'https://res.cloudinary.com/archipicture/image/upload/v1580720640/ca-jussey/cam11.jpg")
   binaryTask.onSuccess = function(tesk) {
     console.log("SUCCES !")
   }
+
+  assetsManager.load()
 
   var dome = new BABYLON.PhotoDome(
     'testdome',
