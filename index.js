@@ -89,7 +89,7 @@ const scene = createScene()
 
 var imageTask = assetsManager.addImageTask("image task", "https://res.cloudinary.com/archipicture/image/upload/v1580715596/ca-jussey/cam09.jpg");
 imageTask.onSuccess = function(task) {
-    console.log(task.image.width);
+    console.log(task.image.src);
 }
 
   assetsManager.load()
