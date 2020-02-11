@@ -92,7 +92,7 @@ imageTask.onSuccess = function(task) {
     console.log(task.image.width);
 }
 
-  //assetsManager.load()
+  assetsManager.load()
 
 const check = () => {
   console.log('num = ', num)
