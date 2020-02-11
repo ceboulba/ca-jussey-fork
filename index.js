@@ -87,12 +87,12 @@ const scene = createScene()
 //  AssetsManager
   const assetsManager = new BABYLON.AssetsManager(scene)
 
-  const binaryTask = assetsManager.addBinaryFileTask("'https://res.cloudinary.com/archipicture/image/upload/v1580720640/ca-jussey/cam11.jpg")
-  binaryTask.onSuccess = function(tesk) {
-    console.log("SUCCES !")
-  }
+var imageTask = assetsManager.addImageTask("image task", "https://res.cloudinary.com/archipicture/image/upload/v1580715596/ca-jussey/cam09.jpg");
+imageTask.onSuccess = function(task) {
+    console.log(task.image.width);
+}
 
-  // assetsManager.load()
+  //assetsManager.load()
 
 const check = () => {
   console.log('num = ', num)
