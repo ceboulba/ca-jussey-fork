@@ -83,7 +83,14 @@ var createScene = function () {
 
    var binaryTask = assetsManager.addBinaryFileTask("binary task",   'https://res.cloudinary.com/archipicture/image/upload/v1580719923/ca-jussey/cam16.jpg'
 );
+
+const dataImg = imgs.forEach(el => {
+  assetsManager.addBinaryFileTask('task',el)
+})
+
+
     binaryTask.onSuccess = function (task) {
+      console.log('SUCCES !')
         // Do something with task.data
     }
 
