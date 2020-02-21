@@ -60,6 +60,9 @@ var createScene = function () {
     scene
   )
 
+  // Assets manager
+    var assetsManager = new BABYLON.AssetsManager(scene);
+
   camera.attachControl(canvas, true)
   camera.inputs.attached.mousewheel.detachControl(canvas)
   //camera.lowerAlphaLimit = .85
