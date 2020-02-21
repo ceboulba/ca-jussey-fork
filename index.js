@@ -67,7 +67,6 @@ var createScene = function () {
 
   let zoomLevel = 2
 
-
   var dome = new BABYLON.PhotoDome(
     'testdome',
     imgs[num],
@@ -78,6 +77,20 @@ var createScene = function () {
     },
     scene
   )
+
+   var binaryTask = assetsManager.addBinaryFileTask("binary task",   'https://res.cloudinary.com/archipicture/image/upload/v1580719923/ca-jussey/cam16.jpg'
+);
+    binaryTask.onSuccess = function (task) {
+        // Do something with task.data
+    }
+
+   assetsManager.onFinish = function (tasks) {
+        engine.runRenderLoop(function () {
+            scene.render();
+        });
+    };
+
+  assetsManager.load()
 
   return scene
 }
