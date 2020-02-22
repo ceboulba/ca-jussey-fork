@@ -84,16 +84,16 @@ var createScene = function () {
    var binaryTask = assetsManager.addBinaryFileTask("binary task",   'https://res.cloudinary.com/archipicture/image/upload/v1580719923/ca-jussey/cam16.jpg'
 );
 
-    binaryTask.onSuccess = function (task) {
-      console.log('SUCCES !')
-        // Do something with task.data
-    }
+    // binaryTask.onSuccess = function (task) {
+    //   console.log('SUCCES !')
+    //     // Do something with task.data
+    // }
 
-   assetsManager.onFinish = function (tasks) {
-        engine.runRenderLoop(function () {
-            scene.render();
-        });
-    };
+  //  assetsManager.onFinish = function (tasks) {
+  //       engine.runRenderLoop(function () {
+  //           scene.render();
+  //       });
+  //   };
 
   assetsManager.load()
 
@@ -105,10 +105,10 @@ const scene = createScene()
 //  AssetsManager
   const assetsManager = new BABYLON.AssetsManager(scene)
 
-var imageTask = assetsManager.addImageTask("image task", "https://res.cloudinary.com/archipicture/image/upload/v1580715596/ca-jussey/cam09.jpg");
-imageTask.onSuccess = function(task) {
-    console.log(task.image.src);
-}
+// var imageTask = assetsManager.addImageTask("image task", "https://res.cloudinary.com/archipicture/image/upload/v1580715596/ca-jussey/cam09.jpg");
+// imageTask.onSuccess = function(task) {
+//     console.log(task.image.src);
+// }
 
   assetsManager.load()
 
