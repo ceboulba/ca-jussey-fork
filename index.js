@@ -60,6 +60,8 @@ var createScene = function () {
     scene
   )
 
+  const lesImages = imgs.forEach(img => console.log('done ',img))
+
   // Assets manager
     var assetsManager = new BABYLON.AssetsManager(scene);
 
@@ -103,14 +105,14 @@ var createScene = function () {
 const scene = createScene()
 
 //  AssetsManager
-  const assetsManager = new BABYLON.AssetsManager(scene)
+  // const assetsManager = new BABYLON.AssetsManager(scene)
 
 // var imageTask = assetsManager.addImageTask("image task", "https://res.cloudinary.com/archipicture/image/upload/v1580715596/ca-jussey/cam09.jpg");
 // imageTask.onSuccess = function(task) {
 //     console.log(task.image.src);
 // }
 
-  assetsManager.load()
+  // assetsManager.load()
 
 const check = () => {
   console.log('num = ', num)
