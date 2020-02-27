@@ -1,4 +1,3 @@
-'use strict'
 import './style.css'
 import cloudinary from 'cloudinary-core'
 import * as BABYLON from 'babylonjs'
@@ -7,7 +6,6 @@ var cl = new cloudinary.Cloudinary({cloud_name: "archipicture", secure: true});
 // var tag = cl.imageTag("ca-jussey");
 // tag.toHtml();
 
-const imageOne = cl.url("ca-jussey/cam01.jpg")
 
 const canvas = document.getElementById('renderCanvas')
 const imgBox = document.getElementById('img-box')
@@ -19,7 +17,6 @@ console.log(imageName.innerHTML)
 const imgs = [
   'https://res.cloudinary.com/archipicture/image/upload/v1580713699/ca-jussey/cam01.jpg',
   'https://res.cloudinary.com/archipicture/image/upload/v1580719118/ca-jussey/cam08.jpg',
-  imageOne,
   'https://res.cloudinary.com/archipicture/image/upload/v1580715376/ca-jussey/cam10.jpg',
   'https://res.cloudinary.com/archipicture/image/upload/v1580715596/ca-jussey/cam09.jpg',
   'https://res.cloudinary.com/archipicture/image/upload/v1580719923/ca-jussey/cam16.jpg',
@@ -28,6 +25,7 @@ const imgs = [
   'https://res.cloudinary.com/archipicture/image/upload/v1580720640/ca-jussey/cam11.jpg',
   'https://res.cloudinary.com/archipicture/image/upload/v1580721036/ca-jussey/cam20.jpg',
 ]
+
 const imgName= [
   'Vue axo 01',
   'Vue axo 02',
@@ -60,10 +58,9 @@ var createScene = function () {
     scene
   )
 
-  const lesImages = imgs.forEach(img => console.log('done ',img))
+  //const lesImages = imgs.forEach(img => console.log('done ',img))
 
   // Assets manager
-    var assetsManager = new BABYLON.AssetsManager(scene);
 
   camera.attachControl(canvas, true)
   camera.inputs.attached.mousewheel.detachControl(canvas)
@@ -72,9 +69,13 @@ var createScene = function () {
 
   let zoomLevel = 2
 
+  var assetsManager = new BABYLON.AssetsManager(scene);
+  var binaryTask = assetsManager.addBinaryFileTask("binary task",   imgs[num]);
+
   var dome = new BABYLON.PhotoDome(
     'testdome',
-    imgs[num],
+    // imgs[num],
+    binaryTask.url,
     {
       resolution: 32,
       size: 15,
@@ -83,8 +84,7 @@ var createScene = function () {
     scene
   )
 
-   var binaryTask = assetsManager.addBinaryFileTask("binary task",   'https://res.cloudinary.com/archipicture/image/upload/v1580719923/ca-jussey/cam16.jpg'
-);
+console.log('binary : ', binaryTask)
 
     // binaryTask.onSuccess = function (task) {
     //   console.log('SUCCES !')
@@ -129,9 +129,9 @@ const check = () => {
       imgBox.classList.add('hide')
     })()
   // scene.render()
-  num === 0 ? imgView.src = imgs[0] : null
-  num === 1 ? imgView.src = imgs[1] : null
-  num === 5 ? imgView.src = imgs[5] : null
+  //num === 0 ? imgView.src = imgs[0] : null
+  //num === 1 ? imgView.src = imgs[1] : null
+  //num === 5 ? imgView.src = imgs[5] : null
 }
 
 check(num)
