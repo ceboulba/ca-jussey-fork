@@ -14,7 +14,7 @@ const imgBox = document.getElementById("img-box");
 const imgView = document.getElementById("img-view");
 const viewType = document.querySelector(".view-type");
 const imageName = document.querySelector(".imageName");
-console.log(imageName.innerHTML);
+let num = 0;
 
 const imgs = [
   "https://res.cloudinary.com/archipicture/image/upload/v1580713699/ca-jussey/cam01.jpg",
@@ -42,14 +42,13 @@ const imgName = [
   "Vue 09"
 ];
 
-let num = 0;
 
 const btnPrev = document
   .getElementById("btnPrev")
   .addEventListener("click", () => prev());
 const btnNext = document
   .getElementById("btnNext")
-  .addEventListener("click", () => next());
+  .addEventListener("click", (num) => next(num));
 
 var engine = new BABYLON.Engine(canvas, true);
 
@@ -154,7 +153,8 @@ const check = () => {
 
 check(num);
 
-const next = () => {
+const next = (num) => {
+  console.log('NUM : ',num)
   num < imgs.length - 1 ? num++ : (num = 0);
   scene = createScene();
   check();
