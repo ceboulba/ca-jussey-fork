@@ -138,7 +138,7 @@ const check = () => {
         canvas.classList.add("hide");
         imgBox.classList.remove("hide");
         viewType.classList.add("hide");
-        imgBox.innerHTML = htmlCode
+        imgBox.innerHTML = htmlCode;
       })()
     : (() => {
         canvas.classList.remove("hide");
@@ -158,6 +158,11 @@ const htmlCode = `
       class="view-content" src="https://res.cloudinary.com/archipicture/image/upload/v1563284170/clot-des-orangers/clots-des-orangets-00.jpg" />
      </figure>
 	</div>
+`
+const htmlCanvas =`
+<canvas id="renderCanvas" class="view-content canvas" style="background: url('./images/image.jpg')">
+  Your browser does not support the canvas element.
+</canvas>
 `
 
 check(num);
