@@ -75,7 +75,7 @@ var createScene = function() {
 
 
   const assetsManager = new BABYLON.AssetsManager(scene);
-  const binaryTask = assetsManager.addBinaryFileTask("binary task", imgs[num]);
+  const binaryTask = assetsManager.addBinaryFileTask("binary task", imgs[1]);
 
   // var dome = new BABYLON.PhotoDome(
   //   'testdome',
