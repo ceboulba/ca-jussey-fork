@@ -9,7 +9,7 @@ var cl = new cloudinary.Cloudinary({
 // var tag = cl.imageTag("ca-jussey");
 // tag.toHtml();
 
-const canvas = document.getElementById("renderCanvas");
+const boxContainer = document.querySelector(".box-container");
 //const imgBox = document.querySelector(".box-container");
 //const imgView = document.getElementById("img-view");
 //const viewType = document.querySelector(".view-type");
@@ -136,13 +136,13 @@ const check = () => {
   num === 0
     ? //num <= 1 ?
       (() => {
-       canvas.classList.add("hide");
+       //canvas.classList.add("hide");
       imgBox.classList.remove("hide");
        viewType.classList.add("hide");
-        imgBox.innerHTML = htmlCanvas;
+        boxContainer.innerHTML = htmlCanvas;
       })()
     : (() => {
-        canvas.classList.remove("hide");
+        //canvas.classList.remove("hide");
         viewType.classList.remove("hide");
         //imgBox.classList.add("hide");
       })();
