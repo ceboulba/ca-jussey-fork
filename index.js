@@ -75,8 +75,8 @@ var createScene = function() {
 
   let zoomLevel = 2;
 
-  var assetsManager = new BABYLON.AssetsManager(scene);
-  var binaryTask = assetsManager.addBinaryFileTask("binary task", imgs[num]);
+  const assetsManager = new BABYLON.AssetsManager(scene);
+  const binaryTask = assetsManager.addBinaryFileTask("binary task", imgs[num]);
 
   // var dome = new BABYLON.PhotoDome(
   //   'testdome',
@@ -90,11 +90,15 @@ var createScene = function() {
   //   scene
   // )
 
-  assetsManager.onTaskSuccessObservable.add(function(task) {
+  //assetsManager.onTaskSuccessObservable.add(function(task) {
+  //});
+
+  binaryTask.onSuccess = function (task) {
+    console.log('SUCCES !')
     var dome = new BABYLON.PhotoDome(
       "testdome",
-      // imgs[num],
-      binaryTask.url,
+       imgs[num],
+      //binaryTask.url,
       {
         resolution: 32,
         size: 15,
@@ -102,12 +106,8 @@ var createScene = function() {
       },
       scene
     );
-  });
-
-  // binaryTask.onSuccess = function (task) {
-  //   console.log('SUCCES !')
-  //     // Do something with task.data
-  // }
+      // Do something with task.data
+  }
 
   //  assetsManager.onFinish = function (tasks) {
   //       engine.runRenderLoop(function () {
