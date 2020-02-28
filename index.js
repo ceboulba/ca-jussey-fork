@@ -53,7 +53,7 @@ const btnNext = document
   .getElementById("btnNext")
   .addEventListener("click", (num) => next(num));
 
-//const engine = new BABYLON.Engine(canvas, true);
+const engine = new BABYLON.Engine(canvas, true);
 
 var createScene = function() {
   var scene = new BABYLON.Scene(engine);
@@ -119,7 +119,7 @@ var createScene = function() {
   return scene;
 };
 
-//const scene = createScene();
+const scene = createScene();
 
 //  AssetsManager
 // const assetsManager = new BABYLON.AssetsManager(scene)
@@ -165,7 +165,7 @@ const htmlCanvas =`
 </canvas>
 `
 
-console.log(boxContainer)
+//console.log(boxContainer)
 // boxContainer.innerHTML = htmlCode;
 
 //check(num);
