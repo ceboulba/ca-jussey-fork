@@ -119,7 +119,7 @@ var createScene = function() {
   return scene;
 };
 
-const scene = createScene();
+//const scene = createScene();
 
 //  AssetsManager
 // const assetsManager = new BABYLON.AssetsManager(scene)
@@ -131,26 +131,26 @@ const scene = createScene();
 
 // assetsManager.load()
 
-const check = () => {
-  console.log("num = ", num);
-  num === 0
-    ? //num <= 1 ?
-      (() => {
-       //canvas.classList.add("hide");
-      imgBox.classList.remove("hide");
-       viewType.classList.add("hide");
-        boxContainer.innerHTML = htmlCanvas;
-      })()
-    : (() => {
-        //canvas.classList.remove("hide");
-        viewType.classList.remove("hide");
-        //imgBox.classList.add("hide");
-      })();
-  // scene.render()
-  //num === 0 ? imgView.src = imgs[0] : null
-  //num === 1 ? imgView.src = imgs[1] : null
-  //num === 5 ? imgView.src = imgs[5] : null
-};
+// const check = () => {
+//   console.log("num = ", num);
+//   num === 0
+//     ? //num <= 1 ?
+//       (() => {
+//        //canvas.classList.add("hide");
+//       imgBox.classList.remove("hide");
+//        viewType.classList.add("hide");
+//         boxContainer.innerHTML = htmlCanvas;
+//       })()
+//     : (() => {
+//         //canvas.classList.remove("hide");
+//         viewType.classList.remove("hide");
+//         //imgBox.classList.add("hide");
+//       })();
+//   // scene.render()
+//   //num === 0 ? imgView.src = imgs[0] : null
+//   //num === 1 ? imgView.src = imgs[1] : null
+//   //num === 5 ? imgView.src = imgs[5] : null
+// };
 
 const htmlCode = `
 	<div id="img-box" class="image-box">
@@ -166,7 +166,7 @@ const htmlCanvas =`
 </canvas>
 `
 
-check(num);
+//check(num);
 
 const next = () => {
   num < imgs.length - 1 ? num++ : (num = 0);
