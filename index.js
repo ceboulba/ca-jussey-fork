@@ -46,6 +46,7 @@ const imgName = [
 const btnPrev = document
   .getElementById("btnPrev")
   .addEventListener("click", () => prev());
+
 const btnNext = document
   .getElementById("btnNext")
   .addEventListener("click", (num) => next(num));
@@ -63,16 +64,13 @@ var createScene = function() {
     scene
   );
 
-  //const lesImages = imgs.forEach(img => console.log('done ',img))
-
-  // Assets manager
+  let zoomLevel = 2;
 
   camera.attachControl(canvas, true);
   camera.inputs.attached.mousewheel.detachControl(canvas);
   //camera.lowerAlphaLimit = .85
   //camera.upperAlphaLimit = 4.77
 
-  let zoomLevel = 2;
 
   const assetsManager = new BABYLON.AssetsManager(scene);
   const binaryTask = assetsManager.addBinaryFileTask("binary task", imgs[num]);
@@ -153,7 +151,7 @@ const check = () => {
 
 check(num);
 
-const next = (num) => {
+const next = () => {
   console.log('NUM : ',num)
   num < imgs.length - 1 ? num++ : (num = 0);
   scene = createScene();
