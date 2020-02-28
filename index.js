@@ -132,7 +132,7 @@ const scene = createScene();
 
 const check = () => {
   console.log("num = ", num);
-  num < 2 || num === 5
+  num === 0
     ? //num <= 1 ?
       (() => {
         canvas.classList.add("hide");
