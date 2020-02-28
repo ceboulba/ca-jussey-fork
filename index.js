@@ -9,7 +9,7 @@ var cl = new cloudinary.Cloudinary({
 // var tag = cl.imageTag("ca-jussey");
 // tag.toHtml();
 
-const canvas = document.querySelector("canvas");
+const boxContainer = document.querySelector("box-container");
 //const imgBox = document.querySelector(".box-container");
 //const imgView = document.getElementById("img-view");
 //const viewType = document.querySelector(".view-type");
@@ -53,7 +53,7 @@ const btnNext = document
   .getElementById("btnNext")
   .addEventListener("click", (num) => next(num));
 
-const engine = new BABYLON.Engine(canvas, true);
+//const engine = new BABYLON.Engine(canvas, true);
 
 var createScene = function() {
   var scene = new BABYLON.Scene(engine);
@@ -139,7 +139,6 @@ var createScene = function() {
 //        //canvas.classList.add("hide");
 //       imgBox.classList.remove("hide");
 //        viewType.classList.add("hide");
-//         boxContainer.innerHTML = htmlCanvas;
 //       })()
 //     : (() => {
 //         //canvas.classList.remove("hide");
@@ -166,6 +165,8 @@ const htmlCanvas =`
 </canvas>
 `
 
+boxContainer.innerHTML = htmlCode;
+
 //check(num);
 
 const next = () => {
@@ -181,13 +182,13 @@ const prev = () => {
   check();
 };
 
-engine.runRenderLoop(function() {
-  canvas.innerHTML = imgName[num];
-  scene.render();
-});
+// engine.runRenderLoop(function() {
+//   canvas.innerHTML = imgName[num];
+//   scene.render();
+// });
 
-if (num !== 0) {
-  window.addEventListener("resize", function() {
-    engine.resize();
-  });
-}
+// if (num !== 0) {
+//   window.addEventListener("resize", function() {
+//     engine.resize();
+//   });
+// }
