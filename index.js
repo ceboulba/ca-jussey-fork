@@ -9,7 +9,7 @@ var cl = new cloudinary.Cloudinary({
 // var tag = cl.imageTag("ca-jussey");
 // tag.toHtml();
 
-const boxContainer = document.querySelector("box-container");
+const boxContainer = document.querySelector(".box-container");
 //const imgBox = document.querySelector(".box-container");
 //const imgView = document.getElementById("img-view");
 //const viewType = document.querySelector(".view-type");
@@ -165,7 +165,8 @@ const htmlCanvas =`
 </canvas>
 `
 
-boxContainer.innerHTML = htmlCode;
+console.log(boxContainer)
+// boxContainer.innerHTML = htmlCode;
 
 //check(num);
 
