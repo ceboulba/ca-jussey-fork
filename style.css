@@ -5,8 +5,8 @@
   box-shadow: 0 0 1em rgba(0, 0, 0, .2);
 }
 
-.hide-canvas{
-  display: none;
+.hide{
+  display:none;
 }
 
 .colmun{
