@@ -96,8 +96,8 @@ var createScene = function() {
     console.log('SUCCES !')
     var dome = new BABYLON.PhotoDome(
       "testdome",
-       //imgs[num],
-      binaryTask.url,
+       imgs[1],
+      // binaryTask.url,
       {
         resolution: 32,
         size: 15,
@@ -178,7 +178,7 @@ const next = () => {
 
 const prev = () => {
   //event.preventDefault()
-  num === 0 ? (num = imgs.length - 1) : num--;
+  num === 10 ? (num = imgs.length - 1) : num--;
   scene = createScene();
   check();
 };
