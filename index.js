@@ -17,6 +17,7 @@ const imageName = document.querySelector(".imageName");
 let num = 0;
 
 const imgs = [
+  "https://res.cloudinary.com/archipicture/image/upload/v1563284170/clot-des-orangers/clots-des-orangets-00.jpg",
   "https://res.cloudinary.com/archipicture/image/upload/v1580713699/ca-jussey/cam01.jpg",
   "https://res.cloudinary.com/archipicture/image/upload/v1580719118/ca-jussey/cam08.jpg",
   "https://res.cloudinary.com/archipicture/image/upload/v1580715376/ca-jussey/cam10.jpg",
