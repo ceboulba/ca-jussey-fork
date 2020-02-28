@@ -10,10 +10,11 @@ var cl = new cloudinary.Cloudinary({
 // tag.toHtml();
 
 const canvas = document.getElementById("renderCanvas");
-const imgBox = document.querySelector(".box-container");
-const imgView = document.getElementById("img-view");
-const viewType = document.querySelector(".view-type");
-const imageName = document.querySelector(".imageName");
+//const imgBox = document.querySelector(".box-container");
+//const imgView = document.getElementById("img-view");
+//const viewType = document.querySelector(".view-type");
+//const imageName = document.querySelector(".imageName");
+
 let num = 0;
 
 const imgs = [
@@ -135,15 +136,15 @@ const check = () => {
   num === 0
     ? //num <= 1 ?
       (() => {
-        canvas.classList.add("hide");
-        imgBox.classList.remove("hide");
-        viewType.classList.add("hide");
-        imgBox.innerHTML = htmlCode;
+       canvas.classList.add("hide");
+      imgBox.classList.remove("hide");
+       viewType.classList.add("hide");
+        imgBox.innerHTML = htmlCanvas;
       })()
     : (() => {
         canvas.classList.remove("hide");
         viewType.classList.remove("hide");
-        imgBox.classList.add("hide");
+        //imgBox.classList.add("hide");
       })();
   // scene.render()
   //num === 0 ? imgView.src = imgs[0] : null
