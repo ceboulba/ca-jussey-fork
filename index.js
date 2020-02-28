@@ -97,8 +97,8 @@ var createScene = function() {
     console.log('SUCCES !')
     var dome = new BABYLON.PhotoDome(
       "testdome",
-       imgs[num],
-      //binaryTask.url,
+       //imgs[num],
+      binaryTask.url,
       {
         resolution: 32,
         size: 15,
