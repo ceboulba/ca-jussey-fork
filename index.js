@@ -10,7 +10,7 @@ var cl = new cloudinary.Cloudinary({
 // tag.toHtml();
 
 const canvas = document.getElementById("renderCanvas");
-const imgBox = document.getElementById("img-box");
+const imgBox = document.querySelector(".box-container");
 const imgView = document.getElementById("img-view");
 const viewType = document.querySelector(".view-type");
 const imageName = document.querySelector(".imageName");
@@ -138,6 +138,7 @@ const check = () => {
         canvas.classList.add("hide");
         imgBox.classList.remove("hide");
         viewType.classList.add("hide");
+        imgBox.innerHTML = htmlCode
       })()
     : (() => {
         canvas.classList.remove("hide");
@@ -149,6 +150,15 @@ const check = () => {
   //num === 1 ? imgView.src = imgs[1] : null
   //num === 5 ? imgView.src = imgs[5] : null
 };
+
+const htmlCode = `
+	<div id="img-box" class="image-box">
+		<figure class="image canvas">
+			<img id="img-view" 
+      class="view-content" src="https://res.cloudinary.com/archipicture/image/upload/v1563284170/clot-des-orangers/clots-des-orangets-00.jpg" />
+     </figure>
+	</div>
+`
 
 check(num);
 
