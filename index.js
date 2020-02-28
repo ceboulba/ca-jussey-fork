@@ -152,7 +152,6 @@ const check = () => {
 check(num);
 
 const next = () => {
-  console.log('NUM : ',num)
   num < imgs.length - 1 ? num++ : (num = 0);
   scene = createScene();
   check();
