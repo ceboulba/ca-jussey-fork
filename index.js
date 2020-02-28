@@ -9,7 +9,7 @@ var cl = new cloudinary.Cloudinary({
 // var tag = cl.imageTag("ca-jussey");
 // tag.toHtml();
 
-const boxContainer = document.querySelector(".box-container");
+const canvas = document.querySelector("canvas");
 //const imgBox = document.querySelector(".box-container");
 //const imgView = document.getElementById("img-view");
 //const viewType = document.querySelector(".view-type");
@@ -53,7 +53,7 @@ const btnNext = document
   .getElementById("btnNext")
   .addEventListener("click", (num) => next(num));
 
-var engine = new BABYLON.Engine(canvas, true);
+const engine = new BABYLON.Engine(canvas, true);
 
 var createScene = function() {
   var scene = new BABYLON.Scene(engine);
@@ -182,7 +182,7 @@ const prev = () => {
 };
 
 engine.runRenderLoop(function() {
-  imageName.innerHTML = imgName[num];
+  canvas.innerHTML = imgName[num];
   scene.render();
 });
 
