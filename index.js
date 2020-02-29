@@ -79,7 +79,7 @@ var createScene = function() {
 
   // var dome = new BABYLON.PhotoDome(
   //   'testdome',
-  //   // imgs[num],
+  //    imgs[num],
   //   binaryTask.url,
   //   {
   //     resolution: 32,
