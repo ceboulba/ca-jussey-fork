@@ -173,14 +173,14 @@ const htmlCanvas =`
 const next = () => {
   num < imgs.length - 1 ? num++ : (num = 0);
   scene = createScene();
-  check();
+  //check();
 };
 
 const prev = () => {
   //event.preventDefault()
   num === 10 ? (num = imgs.length - 1) : num--;
   scene = createScene();
-  check();
+  //check();
 };
 
 // engine.runRenderLoop(function() {
