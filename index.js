@@ -118,23 +118,23 @@ var createScene = function() {
 
   //scene.actionManager = new BABYLON.ActionManager(scene);
 
-// From 2D view to fullscreen VR
-scene.actionManager.registerAction(
-new BABYLON.ExecuteCodeAction({
-        trigger: BABYLON.ActionManager.OnKeyDownTrigger,
-        parameter: 's' //press "s" key
-    },
-    function () { vrHelper.enterVR(); }
-));
+// // From 2D view to fullscreen VR
+// scene.actionManager.registerAction(
+// new BABYLON.ExecuteCodeAction({
+//         trigger: BABYLON.ActionManager.OnKeyDownTrigger,
+//         parameter: 's' //press "s" key
+//     },
+//     function () { vrHelper.enterVR(); }
+// ));
 
-// From fullscreenVR to 2D view
-scene.actionManager.registerAction(
-new BABYLON.ExecuteCodeAction({
-        trigger: BABYLON.ActionManager.OnKeyDownTrigger,
-        parameter: 'e' //press "e" key
-    },
-    function () { vrHelper.exitVR(); document.exitFullscreen();}
-));
+// // From fullscreenVR to 2D view
+// scene.actionManager.registerAction(
+// new BABYLON.ExecuteCodeAction({
+//         trigger: BABYLON.ActionManager.OnKeyDownTrigger,
+//         parameter: 'e' //press "e" key
+//     },
+//     function () { vrHelper.exitVR(); document.exitFullscreen();}
+// ));
 
   return scene;
 };
