@@ -127,14 +127,14 @@ const scene = createScene();
 //check(num);
 
 const next = () => {
-  num < imgs.length - 1 ? num++ : (num = 0);
+  //num < imgs.length - 1 ? num++ : (num = 0);
   scene = createScene();
   //check();
 };
 
 const prev = () => {
   //event.preventDefault()
-  num === 10 ? (num = imgs.length - 1) : num--;
+  //num === 10 ? (num = imgs.length - 1) : num--;
   scene = createScene();
   //check();
 };
