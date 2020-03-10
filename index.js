@@ -77,17 +77,17 @@ var createScene = function() {
   //const binaryTask = assetsManager.addBinaryFileTask("binary task", imgs[3]);
   //console.log('ASSET : ' , binaryTask)
 
-  // var dome = new BABYLON.PhotoDome(
-  //   'testdome',
-  //    imgs[num],
-  //   binaryTask.url,
-  //   {
-  //     resolution: 32,
-  //     size: 15,
-  //     useDirectMapping: false,
-  //   },
-  //   scene
-  // )
+  var dome = new BABYLON.PhotoDome(
+    'testdome',
+     imgs[num],
+    binaryTask.url,
+    {
+      resolution: 32,
+      size: 15,
+      useDirectMapping: false,
+    },
+    scene
+  )
 
   //assetsManager.onTaskSuccessObservable.add(function(task) {
   //});
