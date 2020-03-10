@@ -54,88 +54,25 @@ const btnNext = document
 
 const engine = new BABYLON.Engine(canvas, true);
 
-var createScene = function() {
-  var scene = new BABYLON.Scene(engine);
-  var camera = new BABYLON.ArcRotateCamera(
-    "Camera",
-    9,
-    Math.PI / 2,
-    2,
-    BABYLON.Vector3.Zero(),
-    scene
-  );
+var createScene = function () {
+    var scene = new BABYLON.Scene(engine);
+    var camera = new BABYLON.ArcRotateCamera("Camera", -Math.PI / 2,  Math.PI / 2, 5, BABYLON.Vector3.Zero(), scene);
+    camera.attachControl(canvas, true);
+    camera.inputs.attached.mousewheel.detachControl(canvas);
 
-  let zoomLevel = 2;
+    var dome = new BABYLON.PhotoDome(
+        "testdome",
+        imgs[0],
+        {
+            resolution: 32,
+            size: 1000
+        },
+        scene
+    );
 
-  camera.attachControl(canvas, true);
-  camera.inputs.attached.mousewheel.detachControl(canvas);
-  //camera.lowerAlphaLimit = .85
-  //camera.upperAlphaLimit = 4.77
+    //dome.imageMode = BABYLON.PhotoDome.MODE_SIDEBYSIDE;
 
-
-  //const assetsManager = new BABYLON.AssetsManager(scene);
-  //const binaryTask = assetsManager.addBinaryFileTask("binary task", imgs[3]);
-  //console.log('ASSET : ' , binaryTask)
-
-  var dome = new BABYLON.PhotoDome(
-    'testdome',
-     imgs[num],
-    {
-      resolution: 32,
-      size: 15,
-      useDirectMapping: false,
-    },
-    scene
-  )
-
-  //assetsManager.onTaskSuccessObservable.add(function(task) {
-  //});
-
-  // binaryTask.onSuccess = function (task) {
-  //   console.log('SUCCES !')
-  //   var dome = new BABYLON.PhotoDome(
-  //     "testdome",
-  //      imgs[1],
-  //     // binaryTask.url,
-  //     {
-  //       resolution: 32,
-  //       size: 15,
-  //       useDirectMapping: false
-  //     },
-  //     scene
-  //   );
-  //     // Do something with task.data
-  // }
-
-  //  assetsManager.onFinish = function (tasks) {
-  //       engine.runRenderLoop(function () {
-  //           scene.render();
-  //       });
-  //   };
-
-  //assetsManager.load();
-
-  //scene.actionManager = new BABYLON.ActionManager(scene);
-
-// // From 2D view to fullscreen VR
-// scene.actionManager.registerAction(
-// new BABYLON.ExecuteCodeAction({
-//         trigger: BABYLON.ActionManager.OnKeyDownTrigger,
-//         parameter: 's' //press "s" key
-//     },
-//     function () { vrHelper.enterVR(); }
-// ));
-
-// // From fullscreenVR to 2D view
-// scene.actionManager.registerAction(
-// new BABYLON.ExecuteCodeAction({
-//         trigger: BABYLON.ActionManager.OnKeyDownTrigger,
-//         parameter: 'e' //press "e" key
-//     },
-//     function () { vrHelper.exitVR(); document.exitFullscreen();}
-// ));
-
-  return scene;
+    return scene;
 };
 
 const scene = createScene();
